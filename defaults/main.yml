@@ -1,0 +1,5 @@
+---
+
+log_courier_nginx_enabled: no
+log_courier_php_enabled: no
+log_courier_cert: "{{ mandatory }}"
