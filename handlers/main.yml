@@ -1,7 +1,7 @@
 ---
 - name: Reload Service | log-courier
   service:
-    state: reloaded
+    state: force-reload
     name: log-courier
   tags:
     - disruptive
