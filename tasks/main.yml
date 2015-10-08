@@ -20,3 +20,8 @@
   template:
     src: conf.d/forwarder.conf
     dest: /etc/log-courier/log-courier.conf
+
+- name: Service log-courier start
+  service:
+    name: log-courier
+    state: restarted
