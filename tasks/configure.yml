@@ -1,0 +1,11 @@
+---
+- name: Upload public certificate
+  template:
+    src: log-courier.crt
+    dest: /etc/log-courier/log-courier.crt
+
+- name: Configure for forwarder
+  notify: Reload Service | log-courier
+  template:
+    src: conf.d/forwarder.conf
+    dest: /etc/log-courier/log-courier.conf

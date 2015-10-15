@@ -1,0 +1,7 @@
+---
+- name: Service start | log-courier
+  service:
+    state: started
+    name: log-courier
+  tags:
+    - disruptive
