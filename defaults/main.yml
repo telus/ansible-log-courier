@@ -1,6 +1,6 @@
 ---
 log_courier_logstash_server: "aggregator.logger-{{ environment_tier }}.{{ domain }}"
-log_courier_port: 5044
+log_courier_logstash_server_port: 5044
 log_courier_ssl_certificate: "{{ mandatory }}"
 log_courier_ssl_certificate_path: "/etc/log-courier/ssl.crt"
 
