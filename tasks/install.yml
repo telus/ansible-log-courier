@@ -1,4 +1,8 @@
 ---
+- name: debug vars
+  debug:
+    var: php_log_root
+
 - name: Add apt repository
   apt_repository:
     repo: ppa:devel-k/log-courier
