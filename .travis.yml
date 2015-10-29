@@ -27,6 +27,6 @@ script:
   - "ansible-playbook -i tests/inventory tests/$PLAYBOOK --connection=local --sudo"
 
   # check that service starts and stops
-  - sudo service log-courier start
+  - sudo service log-courier restart
   - sudo service log-courier stop
   - sudo service log-courier start
