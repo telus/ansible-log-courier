@@ -1,1 +1,1 @@
-{{ log_courier_ssl_certificate_contents }}
+{{ log_courier_ssl_certificate }}
