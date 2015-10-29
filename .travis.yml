@@ -15,8 +15,6 @@ install:
 
   # configure ansible
   - "{ echo '[defaults]'; echo 'roles_path = ../'; } >> ansible.cfg"
-
-  - ansible-galaxy install telusdigital.php
   
 script:
   # check syntax
