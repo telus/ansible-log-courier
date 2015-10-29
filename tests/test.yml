@@ -4,3 +4,5 @@
   roles:
     - role: ansible-log-courier
       log_courier_ssl_certificate_contents: test
+  vars:
+    domain: test.com
