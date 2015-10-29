@@ -1,20 +1,15 @@
 ---
 - name: service | log-courier | started
   service:
-    name: log-courier
     state: started
+    name: log-courier
 
 - name: service | log-courier | stopped
   service:
-    name: log-courier
     state: stopped
+    name: log-courier
 
 - name: service | log-courier | restarted
   service:
-    name: log-courier
     state: restarted
-
-- name: service | log-courier | reloaded
-  service:
     name: log-courier
-    state: reloaded

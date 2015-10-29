@@ -8,4 +8,4 @@
   template:
     src: etc/log-courier/log-courier.conf
     dest: /etc/log-courier/log-courier.conf
-  notify: service | log-courier | reloaded
+  notify: service | log-courier | restarted

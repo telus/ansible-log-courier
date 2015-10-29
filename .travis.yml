@@ -26,5 +26,7 @@ script:
   # check idempotence
   - "ansible-playbook -i tests/inventory tests/$PLAYBOOK --connection=local --sudo"
 
-  # check that service starts
-  - sudo cat /etc/log-courier/log-courier.conf
+  # check that service starts and stops
+  - sudo service log-courier start
+  - sudo service log-courier stop
+  - sudo service log-courier start
