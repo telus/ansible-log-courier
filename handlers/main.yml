@@ -1,7 +1,15 @@
 ---
-- name: Reload Service | log-courier
+- name: service | log-courier | started
+  service:
+    state: started
+    name: log-courier
+
+- name: service | log-courier | stopped
+  service:
+    state: stopped
+    name: log-courier
+
+- name: service | log-courier | restarted
   service:
     state: restarted
     name: log-courier
-  tags:
-    - disruptive

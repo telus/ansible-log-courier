@@ -1,5 +1,13 @@
 ---
+log_courier_logstash_server: "aggregator.logger-{{ environment_tier }}.{{ domain }}"
+log_courier_logstash_server_port: 5044
+log_courier_ssl_certificate: "{{ mandatory }}"
+log_courier_ssl_certificate_path: "/etc/log-courier/ssl.crt"
+
 log_courier_nginx_enabled: no
+log_courier_nginx_error_log_path: "{{ nginx_error_log_path | default('/var/log/nginx/error.log') }}"
+log_courier_nginx_access_log_path: "{{ nginx_access_log_path | default('/var/log/nginx/access.log') }}"
+
 log_courier_php_enabled: no
-log_courier_cert: "{{ mandatory }}"
-log_courier_port: 5044
+log_courier_php_fpm_log_path: "{{ php_fpm_log_path | default('var/log/php/fpm.log') }}"
+log_courier_php_error_log_path: "{{ php_error_log_path | default('var/log/php/fpm.log') }}"

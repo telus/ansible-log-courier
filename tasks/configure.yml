@@ -1,11 +1,11 @@
 ---
 - name: Upload public certificate
   template:
-    src: log-courier.crt
-    dest: /etc/log-courier/log-courier.crt
+    src: etc/log-courier/ssl.crt
+    dest: "{{ log_courier_ssl_certificate_path }}"
 
 - name: Configure for forwarder
-  notify: Reload Service | log-courier
   template:
-    src: conf.d/forwarder.conf
+    src: etc/log-courier/log-courier.conf
     dest: /etc/log-courier/log-courier.conf
+  notify: service | log-courier | restarted
