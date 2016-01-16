@@ -4,9 +4,6 @@
     repo: ppa:devel-k/log-courier
 
 - name: Install Packages | apt
-  apt:
-    state: latest
-    pkg: "{{ item }}"
-    update_cache: yes
+  command: apt-get install log-courier
   with_items:
     - log-courier
