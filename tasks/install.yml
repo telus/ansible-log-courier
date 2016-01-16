@@ -6,7 +6,10 @@
     - log-courier
 
 - name: Install Packages | apt
-  command: apt-get install log-courier
+  apt:
+    state: latest
+    pkg: "{{ item }}"
+    update_cache: yes
   with_items:
     - log-courier
   tags:
