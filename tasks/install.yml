@@ -2,8 +2,12 @@
 - name: Add apt repository
   apt_repository:
     repo: ppa:devel-k/log-courier
+  tags:
+    - log-courier
 
 - name: Install Packages | apt
   command: apt-get install log-courier
   with_items:
+    - log-courier
+  tags:
     - log-courier

@@ -3,9 +3,13 @@
   template:
     src: etc/log-courier/ssl.crt
     dest: "{{ log_courier_ssl_certificate_path }}"
+  tags:
+    - log-courier
 
 - name: Configure for forwarder
   template:
     src: etc/log-courier/log-courier.conf
     dest: /etc/log-courier/log-courier.conf
   notify: service | log-courier | restarted
+  tags:
+    - log-courier
