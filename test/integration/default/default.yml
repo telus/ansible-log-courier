@@ -1,10 +1,16 @@
 ---
-- hosts: localhost
+# host to test against
+- hosts: test-kitchen
   remote_user: root
+
   roles:
+    # name of role to test
     - role: ansible-log-courier
       log_courier_ssl_certificate: test
       log_courier_nginx_enabled: yes
       log_courier_php_enabled: yes
+
   vars:
     domain: test.com
+    project: test-project
+    environment_tier: development
