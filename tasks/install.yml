@@ -8,7 +8,7 @@
 - name: Install Packages | apt
   apt:
     state: latest
-    pkg: "{{ item }}"
+    name: "{{ item }}"
     update_cache: yes
   with_items:
     - log-courier
