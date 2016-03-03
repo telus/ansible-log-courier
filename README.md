@@ -36,3 +36,6 @@ License
 Contributors
 ------------
 * Kinnan Kwok
+
+# How to write kitchen tests:
+https://noqcks.io/notes/testing-ansible-roles-with-test-kitchen.html
