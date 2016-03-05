@@ -1,4 +1,14 @@
 ---
+dependencies:
+  - role: telusdigital.upstart
+    upstart_description: 'log-courier'
+    upstart_name: "log-courier"
+    upstart_user: "root"
+    upstart_group: "syslog"
+    upstart_exec_path: "/usr/sbin/log-courier"
+    upstart_pidfile_path: "/var/run/log-courier.pid"
+    upstart_exec_flags: 
+      - "-config /etc/log-courier/log-courier.conf"
 galaxy_info:
   author: "Kinnan Kwok"
   categories:
