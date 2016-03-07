@@ -7,7 +7,7 @@ describe 'ansible-log-courier::default' do
   end
 
   describe service('log-courier') do
-    it { should be_running }
+    it { should be_running.under('upstart') }
   end
 
 end
