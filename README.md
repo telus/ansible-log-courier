@@ -10,7 +10,7 @@ Tunables
 * `log_courier_logstash_server:` (string) - The endpoint where the logstash server is located.
 * `log_courier_logstash_server_port:` (string) - The port the logstash server is listening on.
 * `log_courier_ssl_certificate:` (string) - The public logstash ssl certificate.
-* `log_courier_ssl_certificate_path:` (string) - The path where the logstash ssl public cert is located. 
+* `log_courier_ssl_certificate_path:` (string) - The path where the logstash ssl public cert is located.
 * `log_courier_nginx_enabled:` (boolean) - Is log-courier forwarding nginx logs?
 * `log_courier_nginx_error_log_path:` (string) - The path where nginx error logs are found.
 * `log_courier_nginx_access_log_path:` (string) - The path where nginx access logs are found.
@@ -36,10 +36,11 @@ License
 Contributors
 ------------
 * Kinnan Kwok
+* Nikki
 
 # For Developers:
 
-## Environment setup. 
+## Environment setup.
 * Install ruby >= 2.X
 * Install docker
 * `bundle install` in the current working directory
@@ -48,12 +49,12 @@ Contributors
 You might have to install docker machine
 
 ### Ubuntu:
-* Update .kitchen.yml. Uncomment the following line: 
+* Update .kitchen.yml. Uncomment the following line:
   `socket: unix:///var/run/docker.sock`
 
 * meta/main.yml is where you list all the dependencies. When you list a dependency it runs the whole playbook you have listed.
 
-* `default_spec.rb` contains the tests that should be run by the kitchen file. 
+* `default_spec.rb` contains the tests that should be run by the kitchen file.
 * To run a test go the terminal and type:
 `$ kitchen test `
 * To log into the docker container do the follwing:
