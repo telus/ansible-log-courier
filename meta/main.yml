@@ -1,6 +1,6 @@
 ---
 dependencies:
-  - role: telusdigital.upstart
+  - src: telusdigital.upstart
     upstart_description: 'log-courier'
     upstart_name: "log-courier"
     upstart_user: "root"
